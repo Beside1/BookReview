@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Вы превысили скорость чтения | BookReview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-404-body">
+
+    <div class="p4-blur-bg">
+        <span>А Б В Г Д Е Ж З И К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я</span>
+        <span>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</span>
+        <span>КНИГИ ТЕКСТ СТРАНИЦЫ СЛОВА БУКВЫ ЧТЕНИЕ СКОРОСТЬ</span>
+        <span>BOOK REVIEW READING SPEED SYMBOLS TEXT PAGES WORDS</span>
+    </div>
+
+    <header>
+        <div class="top-bar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Реклама</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content">
+            <div class="logo"></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Поиск книг...">
+                <button>
+                    <svg width="20" height="20" viewBox="0 0 24 24">
+                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="p4-main-container">
+        <div class="p4-card">
+            <h1 class="p4-title">Ошибка 404</h1>
+            <h2 class="p4-subtitle">Вы превысили скорость чтения!</h2>
+            
+            <p class="p4-message">
+                Вы читаете так быстро, что пролетели мимо страницы.<br>
+                Сбавьте обороты!
+            </p>
+
+        <div class="p4-symbolometer-wrapper">
+            <div class="p4-symbolometer-face">
+
+                <div class="p4-zones-layer"></div>
+                
+                <div class="p4-center-cover"></div>
+                
+                <div class="p4-needle" id="p4-needle"></div>
+                
+                <div class="p4-needle-dot"></div>
+            </div>
+            <div class="p4-label">СИМВОЛОМЕТР</div>
+        </div>
+
+            <button class="p4-btn" id="p4-action-btn" onclick="slowDownAndReturn()">
+                 Замедлиться и вернуться
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О ПРОЕКТЕ</h3>
+                <ul>
+                    <li><a href="about.html">О СЕБЕ</a></li>
+                    <li><a href="#">КОНТАКТЫ</a></li>
+                    <li><a href="#">РЕКЛАМА</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ПОМОЩЬ</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="privacy.html">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a></li>
+                    <li><a href="https://bartc.by/index.php/ru/">БТК</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>СОЦСЕТИ</h3>
+                <ul>
+                    <li><a href="https://vk.com/beside_ae">VK</a></li>
+                    <li><a href="https://t.me/beside_1">TG</a></li>
+                    <li><a href="mailto:cherepvlad2006@gmail.com">GMAIL: cherepvlad2006@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 BookReview</p>
+        </div>
+    </footer>
+
+        <script>
+            function slowDownAndReturn() {
+                const needle = document.getElementById('p4-needle');
+                const btn = document.getElementById('p4-action-btn');
+                
+                btn.disabled = true;
+                btn.innerHTML = 'Сбрасываем скорость...';
+                btn.style.backgroundColor = '#7f8c8d';
+                btn.style.cursor = 'not-allowed';
+                
+                needle.classList.add('stopped');
+                
+                setTimeout(() => {
+                    needle.style.transform = 'rotate(-70deg)'; 
+                }, 50);
+
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 2000);
+            }
+        </script>
+</body>
+</html>
