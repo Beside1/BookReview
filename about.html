@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О разработчике | BookReview</title>
+    <link rel="icon" href="Images/logo2.ico" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        <ul class="menu__box">
+            <li class="menu-item-has-submenu">
+                <label for="submenu-home" class="menu__item menu__trigger">
+                    Главная <span class="arrow">▼</span>
+                </label>
+                <input type="checkbox" id="submenu-home" class="submenu-toggle" />
+                <ul class="submenu">
+                    <li><a href="about.html" class="submenu-link">О себе</a></li>
+                    <li class="menu-item-has-submenu submenu-nested">
+                        <label for="submenu-contacts" class="submenu-link menu__trigger">
+                            Контакты <span class="arrow">▼</span>
+                        </label>
+                        <input type="checkbox" id="submenu-contacts" class="submenu-toggle" />
+                        <ul class="submenu submenu-level-3">
+                            <li><a href="https://vk.com/beside_ae" class="submenu-link">VK</a></li>
+                            <li><a href="https://t.me/beside_1" class="submenu-link">TG</a></li>
+                            <li><a href="mailto:cherepvlad2006@gmail.com" class="submenu-link">GMAIL</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="submenu-link">Реклама</a></li>
+                </ul>
+            </li>
+            <li class="menu-item-has-submenu">
+                <label for="submenu-genres" class="menu__item menu__trigger">
+                    Жанры <span class="arrow">▼</span>
+                </label>
+                <input type="checkbox" id="submenu-genres" class="submenu-toggle" />
+                <ul class="submenu">
+                    <li><a href="#" class="submenu-link">Фантастика</a></li>
+                    <li><a href="#" class="submenu-link">Детективы</a></li>
+                    <li><a href="#" class="submenu-link">Романы</a></li>
+                    <li><a href="#" class="submenu-link">Поэзия</a></li>
+                    <li><a href="#" class="submenu-link">Драма</a></li>
+                </ul>
+            </li>
+            <li><a class="menu__item" href="#">Top-100</a></li>
+            <li><a class="menu__item" href="#">Блоги</a></li>
+            <li><a class="menu__item" href="gallery.html">Галерея</a></li>
+            <li><a class="menu__item" href="login.html">Войти</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <div class="top-bar desktop-nav">
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#">Главная</a>
+                        <ul class="dropdown-menu2">
+                            <li><a href="about.html">О себе</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Реклама</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Жанры</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Фантастика</a></li>
+                            <li><a href="#">Детективы</a></li>
+                            <li><a href="#">Романы</a></li>
+                            <li><a href="#">Поэзия</a></li>
+                            <li><a href="#">Драма</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Top-100</a></li>
+                    <li><a href="#">Блоги</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="login.html">Войти</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content">
+            <a href="index.html" class="logo" aria-label="На главную страницу"></a>
+            <div class="search-bar">
+                <input type="text" placeholder="Найти книгу, автора или жанр...">
+                <button type="submit">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="about-main">
+
+        <section class="ab-hero">
+            <div class="ab-hero-inner">
+                <div class="ab-photo-wrap">
+                    <img src="images/photo6.jpg" alt="Фото разработчика" class="ab-photo">
+                    <div class="ab-photo-ring"></div>
+                </div>
+                <div class="ab-hero-text">
+                    <span class="ab-tag">Разработчик проекта</span>
+                    <h1 class="ab-name">Черепович Владислав Дмитриевич</h1>
+                    <p class="ab-role">Разработчик сайта · Студент · Книголюб</p>
+                    <p class="ab-intro">
+                        Привет! Я создал BookReview как учебный проект, совместив страсть к книгам
+                        с изучением веб-разработки. Здесь можно найти рецензии, открыть новые жанры
+                        и поделиться впечатлениями от прочитанного.
+                    </p>
+                    <div class="ab-socials">
+                        <a href="https://vk.com/beside_ae" class="ab-social-btn">VK</a>
+                        <a href="https://t.me/beside_1" class="ab-social-btn">TG</a>
+                        <a href="https://github.com/Beside1" class="ab-social-btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ab-section">
+            <div class="ab-section-inner">
+                <h2 class="ab-section-title">О проекте</h2>
+                <div class="ab-cards">
+                    <div class="ab-card">
+                        <div class="ab-card-icon">📚</div>
+                        <h3>Идея</h3>
+                        <p>BookReview — это платформа для читателей, где каждый может найти рецензию на любимую книгу или поделиться своим мнением с сообществом.</p>
+                    </div>
+                    <div class="ab-card">
+                        <div class="ab-card-icon">🛠</div>
+                        <h3>Технологии</h3>
+                        <p>Проект написан на чистом HTML и CSS без сторонних фреймворков. Всё что вы видите — результат ручной вёрстки и работы с браузерными возможностями.</p>
+                    </div>
+                    <div class="ab-card">
+                        <div class="ab-card-icon">🎯</div>
+                        <h3>Цель</h3>
+                        <p>Практика разработки сайта, освоение CSS-анимаций, адаптивной вёрстки и создание полноценного многостраничного сайта с нуля.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ab-section ab-section-dark">
+            <div class="ab-section-inner">
+                <div class="ab-quote-wrap">
+                    <div class="ab-quote-mark">"</div>
+                    <blockquote class="ab-quote-text">
+                        Книга — это зеркало, в котором отражается душа читателя.
+                        Каждая страница — это шаг в новый мир, который живёт
+                        только тогда, когда его кто-то читает.
+                    </blockquote>
+                    <p class="ab-quote-author">— Любимая мысль разработчика</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ab-section">
+            <div class="ab-section-inner">
+                <h2 class="ab-section-title">Немного о себе</h2>
+                <div class="ab-facts">
+                    <div class="ab-fact">
+                        <div class="ab-fact-num">12+</div>
+                        <div class="ab-fact-label">книг прочитано<br>за последний год</div>
+                    </div>
+                    <div class="ab-fact">
+                        <div class="ab-fact-num">2</div>
+                        <div class="ab-fact-label">недели на создание<br>этого сайта</div>
+                    </div>
+                    <div class="ab-fact">
+                        <div class="ab-fact-num">∞</div>
+                        <div class="ab-fact-label">энергетиков<br>в процессе</div>
+                    </div>
+                    <div class="ab-fact">
+                        <div class="ab-fact-num">1</div>
+                        <div class="ab-fact-label">большая мечта —<br>свой проект</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ab-section">
+            <div class="ab-section-inner">
+                <h2 class="ab-section-title">Любимые книги</h2>
+                <div class="ab-books">
+                    <div class="ab-book">
+                        <div class="ab-book-spine" style="background: #2c3e50;"></div>
+                        <div class="ab-book-info">
+                            <h4>Мастер и Маргарита</h4>
+                            <p>Михаил Булгаков</p>
+                        </div>
+                    </div>
+                    <div class="ab-book">
+                        <div class="ab-book-spine" style="background: #8e44ad;"></div>
+                        <div class="ab-book-info">
+                            <h4>Метро 2033</h4>
+                            <p>Дмитрий Глуховский</p>
+                        </div>
+                    </div>
+                    <div class="ab-book">
+                        <div class="ab-book-spine" style="background: #c0392b;"></div>
+                        <div class="ab-book-info">
+                            <h4>Фауст</h4>
+                            <p>Иоганн Вольфганг фон Гёте</p>
+                        </div>
+                    </div>
+                    <div class="ab-book">
+                        <div class="ab-book-spine" style="background: #16a085;"></div>
+                        <div class="ab-book-info">
+                            <h4>Ведьмак</h4>
+                            <p>Анджей Сапковский</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ab-section ab-section-dark">
+            <div class="ab-section-inner ab-contact-inner">
+                <h2 class="ab-section-title ab-section-title-light">Связаться со мной</h2>
+                <p class="ab-contact-sub">Если у вас есть вопросы по проекту или предложения о сотрудничестве — пишите!</p>
+                <div class="ab-contact-links">
+                    <a href="mail.to:cherepvlad2006@gmail.com" class="ab-contact-btn">
+                        <span class="ab-contact-icon">✉</span>
+                        cherepvlad2006@gmail.com
+                    </a>
+                    <a href="https://vk.com/beside_ae" class="ab-contact-btn">
+                        <span class="ab-contact-icon">VK</span>
+                        ВКонтакте
+                    </a>
+                    <a href="https://t.me/beside_1" class="ab-contact-btn">
+                        <span class="ab-contact-icon">TG</span>
+                        Telegram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О ПРОЕКТЕ</h3>
+                <ul>
+                    <li><a href="about.html">О СЕБЕ</a></li>
+                    <li><a href="#">КОНТАКТЫ</a></li>
+                    <li><a href="#">РЕКЛАМА</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ПОМОЩЬ</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="privacy.html">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a></li>
+                    <li><a href="https://bartc.by/index.php/ru/">БТК</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>СОЦСЕТИ</h3>
+                <ul>
+                    <li><a href="https://vk.com/beside_ae">VK</a></li>
+                    <li><a href="https://t.me/beside_1">TG</a></li>
+                    <li><a href="mailto:cherepvlad2006@gmail.com">GMAIL: cherepvlad2006@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 BookReview</p>
+        </div>
+    </footer>
+
+</body>
+</html>

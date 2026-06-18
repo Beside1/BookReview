@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | BookReview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="reg-page">
+
+    <div class="book-container">
+        <div class="book">
+
+            <div class="cover back-cover">
+                <div class="finish-content">
+                    <div class="logo-circle">BR</div>
+                    <p class="logo-name">BookReview</p>
+                    <h2>Добро пожаловать!</h2>
+                    <p>Ваша история начинается здесь.</p>
+                    <a href="login.html" class="login-link">Перейти ко входу →</a>
+                </div>
+            </div>
+
+            <div class="page page-3">
+                <div class="page-back"></div>
+                <div class="page-content">
+                    <span class="page-number">Глава III</span>
+                    <h3>Безопасность</h3>
+                    <div class="input-group" id="group-pass">
+                        <input type="password" id="password" required placeholder=" ">
+                        <label for="password">Придумайте пароль</label>
+                    </div>
+                    <button class="next-page-btn" id="btn-3">Завершить ✔</button>
+                </div>
+            </div>
+
+            <div class="page page-2">
+                <div class="page-back"></div>
+                <div class="page-content">
+                    <span class="page-number">Глава II</span>
+                    <h3>Контактные данные</h3>
+                    <div class="input-group" id="group-email">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">Email адрес</label>
+                    </div>
+                    <button class="next-page-btn" id="btn-2">Следующая страница ➜</button>
+                </div>
+            </div>
+
+            <div class="page page-1">
+                <div class="page-back"></div>
+                <div class="page-content">
+                    <span class="page-number">Глава I</span>
+                    <h3>Представьтесь</h3>
+                    <div class="input-group" id="group-name">
+                        <input type="text" id="username" required placeholder=" ">
+                        <label for="username">Ваше имя</label>
+                    </div>
+                    <button class="next-page-btn" id="btn-1">Следующая страница ➜</button>
+                </div>
+            </div>
+
+            <div class="cover front-cover" id="front-cover">
+                <div class="spine-shadow"></div>
+                <div class="side-front"></div>
+                <div class="cover-content-wrapper" id="cover-content">
+                    <h2 class="logo-text">BookReview</h2>
+                    <p class="subtitle">СОЗДАНИЕ АККАУНТА</p>
+                    <div class="cover-divider"></div>
+                    <button class="open-btn" id="open-book">Открыть книгу →</button>
+                </div>
+                <div class="side-back">
+                    <div class="inner-content">
+                        <div class="inner-logo">BR</div>
+                        <p class="inner-quote">"Чтение — это путешествие,<br>которое никогда не заканчивается."</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const frontCover   = document.getElementById('front-cover');
+        const coverContent = document.getElementById('cover-content');
+        const page1 = document.querySelector('.page-1');
+        const page2 = document.querySelector('.page-2');
+        const page3 = document.querySelector('.page-3');
+
+        function setPage(el, state, zIndex) {
+            el.classList.remove('flipped', 'stacked-1', 'stacked-2');
+            if (state) el.classList.add(state);
+            el.style.zIndex = zIndex;
+            const front = el.querySelector('.page-content');
+            const back  = el.querySelector('.page-back');
+            if (state === 'flipped' || state === 'stacked-1' || state === 'stacked-2') {
+                front.style.opacity = '0';
+                back.style.opacity  = '1';
+            } else {
+                front.style.opacity = '1';
+                back.style.opacity  = '0';
+            }
+        }
+
+        function validateInput(inputEl, groupEl) {
+            if (inputEl.value.trim() === '') {
+                groupEl.classList.add('error');
+                groupEl.classList.remove('shake');
+                void groupEl.offsetWidth;
+                groupEl.classList.add('shake');
+                return false;
+            }
+            groupEl.classList.remove('error');
+            return true;
+        }
+
+        ['username','email','password'].forEach(id => {
+            document.getElementById(id).addEventListener('input', function() {
+                this.parentElement.classList.remove('error');
+            });
+        });
+
+        document.getElementById('open-book').addEventListener('click', () => {
+            frontCover.classList.add('flipped');
+            coverContent.classList.add('hidden');
+        });
+
+        document.getElementById('btn-1').addEventListener('click', () => {
+            if (validateInput(document.getElementById('username'), document.getElementById('group-name')))
+                setPage(page1, 'flipped', 11);
+        });
+
+        document.getElementById('btn-2').addEventListener('click', () => {
+            if (validateInput(document.getElementById('email'), document.getElementById('group-email'))) {
+                setPage(page1, 'stacked-1', 10);
+                setPage(page2, 'flipped', 11);
+            }
+        });
+
+        document.getElementById('btn-3').addEventListener('click', () => {
+            if (validateInput(document.getElementById('password'), document.getElementById('group-pass'))) {
+                setPage(page1, 'stacked-2', 9);
+                setPage(page2, 'stacked-1', 10);
+                setPage(page3, 'flipped', 11);
+            }
+        });
+    </script>
+
+</body>
+</html>

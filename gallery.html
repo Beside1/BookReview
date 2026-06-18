@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gallery-page">
+
+    <input type="radio" name="slide" id="s1" checked>
+    <input type="radio" name="slide" id="s2">
+    <input type="radio" name="slide" id="s3">
+    <input type="radio" name="slide" id="s4">
+    <input type="radio" name="slide" id="s5">
+
+    <input type="checkbox" id="zoom1" class="gl-zoom-toggle">
+    <input type="checkbox" id="zoom2" class="gl-zoom-toggle">
+    <input type="checkbox" id="zoom3" class="gl-zoom-toggle">
+    <input type="checkbox" id="zoom4" class="gl-zoom-toggle">
+    <input type="checkbox" id="zoom5" class="gl-zoom-toggle">
+
+    <div class="gl-page-wrap">
+
+        <div class="gl-header">
+            <a href="index.html" class="gl-back-link">← На главную</a>
+            <h1 class="gl-title">Галерея разработчика</h1>
+            <span class="gl-sub">личный архив</span>
+        </div>
+
+        <div class="gl-wrap">
+
+            <div class="gl-track">
+                <div class="gl-slide gl-slide-1">
+                    <img src="images/photo1.jpg" alt="Фото 1">
+                    <div class="gl-caption">Начало практики</div>
+
+                    <label for="zoom1" class="gl-zoom-btn">⤢</label>
+                </div>
+                <div class="gl-slide gl-slide-2">
+                    <img src="images/photo2.jpg" alt="Фото 2">
+                    <div class="gl-caption">Конец первой недели практики</div>
+                    <label for="zoom2" class="gl-zoom-btn">⤢</label>
+                </div>
+                <div class="gl-slide gl-slide-3">
+                    <img src="images/photo3.jpg" alt="Фото 3">
+                    <div class="gl-caption">Начало второй недели практики</div>
+                    <label for="zoom3" class="gl-zoom-btn">⤢</label>
+                </div>
+                <div class="gl-slide gl-slide-4">
+                    <img src="images/photo4.jpg" alt="Фото 4">
+                    <div class="gl-caption">Конец второй недели практики</div>
+                    <label for="zoom4" class="gl-zoom-btn">⤢</label>
+                </div>
+                <div class="gl-slide gl-slide-5">
+                    <img src="images/photo5.jpg" alt="Фото 5">
+                    <div class="gl-caption">Конец</div>
+                    <label for="zoom5" class="gl-zoom-btn">⤢</label>
+                </div>
+            </div>
+
+            <label class="gl-arrow gl-prev gl-prev-1" for="s5">&#8592;</label>
+            <label class="gl-arrow gl-prev gl-prev-2" for="s1">&#8592;</label>
+            <label class="gl-arrow gl-prev gl-prev-3" for="s2">&#8592;</label>
+            <label class="gl-arrow gl-prev gl-prev-4" for="s3">&#8592;</label>
+            <label class="gl-arrow gl-prev gl-prev-5" for="s4">&#8592;</label>
+
+            <label class="gl-arrow gl-next gl-next-1" for="s2">&#8594;</label>
+            <label class="gl-arrow gl-next gl-next-2" for="s3">&#8594;</label>
+            <label class="gl-arrow gl-next gl-next-3" for="s4">&#8594;</label>
+            <label class="gl-arrow gl-next gl-next-4" for="s5">&#8594;</label>
+            <label class="gl-arrow gl-next gl-next-5" for="s1">&#8594;</label>
+
+            <div class="gl-counter">
+                <span class="gl-count-1">1 / 5</span>
+                <span class="gl-count-2">2 / 5</span>
+                <span class="gl-count-3">3 / 5</span>
+                <span class="gl-count-4">4 / 5</span>
+                <span class="gl-count-5">5 / 5</span>
+            </div>
+
+        </div>
+
+        <div class="gl-dots">
+            <label for="s1" class="gl-dot-1"></label>
+            <label for="s2" class="gl-dot-2"></label>
+            <label for="s3" class="gl-dot-3"></label>
+            <label for="s4" class="gl-dot-4"></label>
+            <label for="s5" class="gl-dot-5"></label>
+        </div>
+
+    </div>
+
+    <div class="gl-modal gl-modal-1">
+        <label for="zoom1" class="gl-modal-overlay"></label>
+        <div class="gl-modal-content">
+            <label for="zoom1" class="gl-modal-close">✕</label>
+            <img src="images/photo1.jpg" alt="Фото 1">
+            <p class="gl-modal-caption">Начало практики</p>
+        </div>
+    </div>
+
+    <div class="gl-modal gl-modal-2">
+        <label for="zoom2" class="gl-modal-overlay"></label>
+        <div class="gl-modal-content">
+            <label for="zoom2" class="gl-modal-close">✕</label>
+            <img src="images/photo2.jpg" alt="Фото 2">
+            <p class="gl-modal-caption">Конец первой недели практики</p>
+        </div>
+    </div>
+
+    <div class="gl-modal gl-modal-3">
+        <label for="zoom3" class="gl-modal-overlay"></label>
+        <div class="gl-modal-content">
+            <label for="zoom3" class="gl-modal-close">✕</label>
+            <img src="images/photo3.jpg" alt="Фото 3">
+            <p class="gl-modal-caption">Начало второй недели практики</p>
+        </div>
+    </div>
+
+    <div class="gl-modal gl-modal-4">
+        <label for="zoom4" class="gl-modal-overlay"></label>
+        <div class="gl-modal-content">
+            <label for="zoom4" class="gl-modal-close">✕</label>
+            <img src="images/photo4.jpg" alt="Фото 4">
+            <p class="gl-modal-caption">Конец второй недели практики</p>
+        </div>
+    </div>
+
+    <div class="gl-modal gl-modal-5">
+        <label for="zoom5" class="gl-modal-overlay"></label>
+        <div class="gl-modal-content">
+            <label for="zoom5" class="gl-modal-close">✕</label>
+            <img src="images/photo5.jpg" alt="Фото 5">
+            <p class="gl-modal-caption">Конец</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

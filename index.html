@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookReview - Ваш гид в мире книг</title>
+    <link rel="icon" href="Images/logo2.ico" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        
+        <ul class="menu__box">
+            <li class="menu-item-has-submenu">
+                <label for="submenu-home" class="menu__item menu__trigger">
+                    Главная <span class="arrow">▼</span>
+                </label>
+                <input type="checkbox" id="submenu-home" class="submenu-toggle" />
+                
+                <ul class="submenu">
+                    <li><a href="about.html" class="submenu-link">О себе</a></li>
+                    
+                    <li class="menu-item-has-submenu submenu-nested">
+                        <label for="submenu-contacts" class="submenu-link menu__trigger">
+                            Контакты <span class="arrow">▼</span>
+                        </label>
+                        <input type="checkbox" id="submenu-contacts" class="submenu-toggle" />
+                        
+                        <ul class="submenu submenu-level-3">
+                            <li><a href="https://vk.com/beside_ae" class="submenu-link">VK</a></li>
+                            <li><a href="https://t.me/beside_1" class="submenu-link">TG</a></li>
+                            <li><a href="mailto:cherepvlad2006@gmail.com" class="submenu-link">GMAIL</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#" class="submenu-link">Реклама</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-item-has-submenu">
+                <label for="submenu-genres" class="menu__item menu__trigger">
+                    Жанры <span class="arrow">▼</span>
+                </label>
+                <input type="checkbox" id="submenu-genres" class="submenu-toggle" />
+                
+                <ul class="submenu">
+                    <li><a href="#" class="submenu-link">Фантастика</a></li>
+                    <li><a href="#" class="submenu-link">Детективы</a></li>
+                    <li><a href="#" class="submenu-link">Романы</a></li>
+                    <li><a href="#" class="submenu-link">Поэзия</a></li>
+                    <li><a href="#" class="submenu-link">Драма</a></li>
+                </ul>
+            </li>
+
+            <li><a class="menu__item" href="#">Top-100</a></li>
+            <li><a class="menu__item" href="#">Блоги</a></li>
+            <li><a class="menu__item" href="gallery.html">Галерея</a></li>
+            <li><a class="menu__item" href="login.html">Войти</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <div class="top-bar desktop-nav">
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#">Главная</a>
+                        <ul class="dropdown-menu2">
+                            <li><a href="about.html">О себе</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Реклама</a></li>
+                        </ul>
+                    </li> 
+                    <li class="dropdown">
+                        <a href="#">Жанры</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Фантастика</a></li>
+                            <li><a href="#">Детективы</a></li>
+                            <li><a href="#">Романы</a></li>
+                            <li><a href="#">Поэзия</a></li>
+                            <li><a href="#">Драма</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Top-100</a></li>
+                    <li><a href="#">Блоги</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="login.html">Войти</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="header-content">
+            <a href="index.html" class="logo" aria-label="На главную страницу"></a>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Найти книгу, автора или жанр...">
+                <button type="submit">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="editor-choice">
+            <h2>ВЫБОР РЕДАКЦИИ</h2>
+            
+            <div class="editor-choice-content">
+                <div class="featured-book">
+                    <img class="book-cover" src="images/faust.jpg" alt="Обложка книги Фауст">
+                    <div class="book-details">
+                        <h3>Фауст</h3>
+                        <p class="author">Иоганн Вольфганг фон Гёте</p>
+                        <div class="rating">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="description">
+                            Сюжет строится вокруг сделки доктора Фауста — ученого, который разочаровался в науке и жизни, — с дьяволом по имени Мефистофель. 
+                            Фауст готов продать душу за один миг подлинного счастья, который он захочет остановить. В первой части это история любви к молодой Гретхен (Маргарите), 
+                            приводящая к трагедии. Во второй части Фауст отправляется в...
+                        </p>
+                        <button class="read-more">читать далее</button>
+                    </div>
+                </div>
+                
+                <div class="book-list">
+                    <div class="book-item">
+                        <img class="book-cover" src="images/Revizor.jpg" alt="Обложка книги Ревизор">
+                        <div class="book-info">
+                            <h3>Ревизор</h3>
+                            <p class="author">Николай Васильевич Гоголь</p>
+                            <div class="rating">
+                                <span>★★★★☆</span>
+                            </div>
+                            <button class="read-more2">читать далее</button>
+                        </div>
+                    </div>
+                    <div class="book-item">
+                        <img class="book-cover" src="images/GrozovoyPereval.jpg" alt="Обложка книги Грозовой перевал">
+                        <div class="book-info">
+                            <h3>Грозовой перевал</h3>
+                            <p class="author">Эмили Джейн Бронте</p>
+                            <div class="rating">
+                                <span>★★★★★</span>
+                            </div>
+                            <button class="read-more2">читать далее</button>
+                        </div>
+                    </div>
+                    <div class="book-item">
+                        <img class="book-cover" src="images/VelikiyGetsbi.jpg" alt="Обложка книги Великий Гэтсби">
+                        <div class="book-info">
+                            <h3>Великий Гэтсби</h3>
+                            <p class="author">Френсис Скотт Фицджеральд</p>
+                            <div class="rating">
+                                <span>★★★★☆</span>
+                            </div>
+                            <button class="read-more2">читать далее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="new-reviews">
+            <h2>НОВЫЕ РЕЦЕНЗИИ</h2>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <img class="book-cover" src="images/MasterandMargarita.jpg" alt="Мастер и Маргарита">
+                    <div class="book-info">
+                        <h3>Мастер и Маргарита</h3>
+                        <p class="author">Булгаков Михаил Афанасьевич</p>
+                        <div class="rating"><span>★★★★☆</span></div>
+                        <button class="read-button">к прочтению</button>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <img class="book-cover" src="images/Metro2033.jpg" alt="Метро 2033">
+                    <div class="book-info">
+                        <h3>Метро 2033</h3>
+                        <p class="author">Глуховский Дмитрий Алексеевич</p>
+                        <div class="rating"><span>★★★★★</span></div>
+                        <button class="read-button">к прочтению</button>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <img class="book-cover" src="images/VedmakLastQuestion.jpg" alt="Ведьмак">
+                    <div class="book-info">
+                        <h3>Ведьмак. Последнее желание</h3>
+                        <p class="author">Анджей Сапковский</p>
+                        <div class="rating"><span>★★★☆☆</span></div>
+                        <button class="read-button">к прочтению</button>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <img class="book-cover" src="images/Mertviedyshi.jpg" alt="Мертвые души">
+                    <div class="book-info">
+                        <h3>Мертвые души</h3>
+                        <p class="author">Николай Васильевич Гоголь</p>
+                        <div class="rating"><span>★★★★☆</span></div>
+                        <button class="read-button">к прочтению</button>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <img class="book-cover" src="images/EvgeniyOnegin.jpg" alt="Евгений Онегин">
+                    <div class="book-info">
+                        <h3>Евгений Онегин</h3>
+                        <p class="author">Александр Сергеевич Пушкин</p>
+                        <div class="rating"><span>★★★★☆</span></div>
+                        <button class="read-button">к прочтению</button>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <img class="book-cover" src="images/klatbishe.jpg" alt="Кладбище домашних животных">
+                    <div class="book-info">
+                        <h3>Кладбище домашних животных</h3>
+                        <p class="author">Стивен Кинг</p>
+                        <div class="rating"><span>★★★★☆</span></div>
+                        <button class="read-button">к прочтению</button>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <img class="book-cover" src="images/darkalleya.jpg" alt="Темные аллеи">
+                    <div class="book-info">
+                        <h3>Темные аллеи</h3>
+                        <p class="author">Иван Алексеевич Бунин</p>
+                        <div class="rating"><span>★★★★☆</span></div>
+                        <button class="read-button">к прочтению</button>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <img class="book-cover" src="images/Mymy.jpg" alt="Муму">
+                    <div class="book-info">
+                        <h3>Муму</h3>
+                        <p class="author">Иван Сергеевич Тургенев</p>
+                        <div class="rating"><span>★★★★☆</span></div>
+                        <button class="read-button">к прочтению</button>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <img class="book-cover" src="images/siyanie.jpg" alt="Сияние">
+                    <div class="book-info">
+                        <h3>Сияние</h3>
+                        <p class="author">Стивен Кинг</p>
+                        <div class="rating"><span>★★★★☆</span></div>
+                        <button class="read-button">к прочтению</button>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <img class="book-cover" src="images/Geroi.jpg" alt="Герой нашего времени">
+                    <div class="book-info">
+                        <h3>Герой нашего времени</h3>
+                        <p class="author">Михаил Юрьевич Лермонтов</p>
+                        <div class="rating"><span>★★★★☆</span></div>
+                        <button class="read-button">к прочтению</button>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <img class="book-cover" src="images/RomeoiJuletta.jpg" alt="Ромео и Джульетта">
+                    <div class="book-info">
+                        <h3>Ромео и Джульетта</h3>
+                        <p class="author">Уильям Шекспир</p>
+                        <div class="rating"><span>★★★★☆</span></div>
+                        <button class="read-button">к прочтению</button>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <img class="book-cover" src="images/iliada.jpg" alt="Илиада">
+                    <div class="book-info">
+                        <h3>Илиада</h3>
+                        <p class="author">Гомер</p>
+                        <div class="rating"><span>★★★★☆</span></div>
+                        <button class="read-button">к прочтению</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О ПРОЕКТЕ</h3>
+                <ul>
+                    <li><a href="about.html">О СЕБЕ</a></li>
+                    <li><a href="#">КОНТАКТЫ</a></li>
+                    <li><a href="#">РЕКЛАМА</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>ПОМОЩЬ</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="privacy.html">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a></li>
+                    <li><a href="https://bartc.by/index.php/ru/">БТК</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>СОЦСЕТИ</h3>
+                <ul>
+                    <li><a href="https://vk.com/beside_ae">VK</a></li>
+                    <li><a href="https://t.me/beside_1">TG</a></li>
+                    <li><a href="mailto:cherepvlad2006@gmail.com">GMAIL</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2026 BookReview</p>
+        </div>
+    </footer>
+</body>
+</html>

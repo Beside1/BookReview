@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход | BookReview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+    <div class="book-container">
+        <div class="book">
+
+            <div class="cover back-cover">
+                <div class="finish-content">
+                    <div class="logo-circle">BR</div>
+                    <p class="logo-name">BookReview</p>
+                    <h2>С возвращением!</h2>
+                    <p>Вы успешно вошли в систему.</p>
+                    <a href="index.html" class="login-link">В личный кабинет →</a>
+                </div>
+            </div>
+
+            <div class="page page-2">
+                <div class="page-back"></div>
+                <div class="page-content">
+                    <span class="page-number">Шаг II</span>
+                    <h3>Пароль</h3>
+                    <div class="input-group" id="group-pass">
+                        <input type="password" id="password" required placeholder=" ">
+                        <label for="password">Введите пароль</label>
+                    </div>
+                    <button class="next-page-btn" id="btn-2">Войти ✔</button>
+                </div>
+            </div>
+
+            <div class="page page-1">
+                <div class="page-back"></div>
+                <div class="page-content">
+                    <span class="page-number">Шаг I</span>
+                    <h3>Логин</h3>
+                    <div class="input-group" id="group-login">
+                        <input type="text" id="username" required placeholder=" ">
+                        <label for="username">Email или Имя</label>
+                    </div>
+                    <button class="next-page-btn" id="btn-1">Далее ➜</button>
+                </div>
+            </div>
+
+            <div class="cover front-cover" id="front-cover">
+                <div class="spine-shadow"></div>
+                <div class="side-front"></div>
+                <div class="cover-content-wrapper" id="cover-content">
+                    <h2 class="logo-text">BookReview</h2>
+                    <p class="subtitle">ВХОД В АККАУНТ</p>
+                    <div class="cover-divider"></div>
+                    <button class="open-btn" id="open-book">Открыть книгу →</button>
+                    <a href="reg.html" class="register-link">Нет аккаунта? Создать</a>
+                </div>
+                <div class="side-back">
+                    <div class="inner-content">
+                        <div class="inner-logo">BR</div>
+                        <p class="inner-quote">"Рады видеть вас<br>снова."</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const frontCover   = document.getElementById('front-cover');
+        const coverContent = document.getElementById('cover-content');
+        const page1 = document.querySelector('.page-1');
+        const page2 = document.querySelector('.page-2');
+
+        function setPage(el, state, zIndex) {
+            el.classList.remove('flipped', 'stacked-1');
+            if (state) el.classList.add(state);
+            el.style.zIndex = zIndex;
+            const front = el.querySelector('.page-content');
+            const back  = el.querySelector('.page-back');
+            if (state === 'flipped' || state === 'stacked-1') {
+                front.style.opacity = '0';
+                back.style.opacity  = '1';
+            } else {
+                front.style.opacity = '1';
+                back.style.opacity  = '0';
+            }
+        }
+
+        function validateInput(inputEl, groupEl) {
+            if (inputEl.value.trim() === '') {
+                groupEl.classList.add('error');
+                groupEl.classList.remove('shake');
+                void groupEl.offsetWidth;
+                groupEl.classList.add('shake');
+                return false;
+            }
+            groupEl.classList.remove('error');
+            return true;
+        }
+
+        ['username','password'].forEach(id => {
+            document.getElementById(id).addEventListener('input', function() {
+                this.parentElement.classList.remove('error');
+            });
+        });
+
+        document.getElementById('open-book').addEventListener('click', () => {
+            frontCover.classList.add('flipped');
+            coverContent.classList.add('hidden');
+        });
+
+        document.getElementById('btn-1').addEventListener('click', () => {
+            if (validateInput(document.getElementById('username'), document.getElementById('group-login')))
+                setPage(page1, 'flipped', 11);
+        });
+
+        document.getElementById('btn-2').addEventListener('click', () => {
+            if (validateInput(document.getElementById('password'), document.getElementById('group-pass'))) {
+                setPage(page1, 'stacked-1', 10);
+                setPage(page2, 'flipped', 11);
+            }
+        });
+    </script>
+
+</body>
+</html>
